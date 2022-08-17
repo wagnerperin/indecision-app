@@ -37,7 +37,7 @@ const counterSlice = createSlice({
         },
         editExpense: {
             reducer: (state, action) => {
-                const { id, updates } = action.payload;
+                const { updates } = action.payload;
                 const expense = state.expenses.find(({ id }) => id === action.payload.id);
                 Object.assign(expense, updates);
             },
